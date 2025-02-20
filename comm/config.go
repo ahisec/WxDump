@@ -10,6 +10,8 @@ import (
 	"golang.org/x/sys/windows"
 )
 
+//搬运:https://github.com/LC044/WeChatMsg/blob/master/app/decrypt/version_list.json
+
 //go:embed WX_OFFS.json
 var versionListData []byte
 
@@ -28,7 +30,8 @@ var PROCESS_ALL_ACCESS = uint32(
 
 // 支持自动获取数据的版本号
 var SupportAutoGetDataVersionList = []string{
-	"3.9.10.16",
+	//"3.9.10.16",
+	"3.9.12.17",
 }
 
 type versionList struct {

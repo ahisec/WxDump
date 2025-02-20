@@ -13,8 +13,9 @@ func main() {
 	is_normal, nickName, account, key_tmp := comm.Get_info()
 	if is_normal != true {
 		key_tmp, err := comm.GetKey(dbPath, addrLen)
-		if err != nil {
+		if (err != nil) || (key_tmp == "None") {
 			fmt.Println("Error:", err)
+			return
 		} else {
 			fmt.Println("Key:", key_tmp)
 		}
